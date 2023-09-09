@@ -5,149 +5,170 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+  <title>Carmen-Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-  <nav class="navbar bg-light">
-    <div class="container-fluid">
-      <i class="fa-brands fa-instagram"></i>
-      <nav class="navbar bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-          </a>
-        </div>
-      </nav>
-      <form class="d-flex" role="search">
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Create a new post
-        </button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-
-              <div class="modal-body">
-                <nav class="navbar bg-light">
-                  <div class="container-fluid">
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-center">
+            <li class="nav-item active">
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Create a new post
+              </button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="caption" class="col-form-label">Caption:</label>
+                          <input type="text" class="form-control" id="caption" placeholder="Add the caption of your post here">
+                        </div>
+                      </form>
+                      <button type="button" class="bg-light border border-secondary-subtle"><i class="fa-solid fa-camera"></i></button>
+                      <button type="button" class="bg-light border border-secondary-subtle"><i class="fa-solid fa-location-dot"></i></button>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-success">Publish</button>
+                    </div>
                   </div>
-                </nav>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-location-dot"></i>
-
+                </div>
               </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle  justify-content-end" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-success">Publish</button>
+  <div class="container">
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-regular fa-square"></i></button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <div class="row justify-content-between">
+          <div class="col p-1">
+            <img class="square-image" src="https://fastly.picsum.photos/id/275/200/200.jpg?hmac=rTtDDof8-XH1HHCkHvJYmlWJU81lIlFVqweHCDDrifQ">
+          </div>
+          <div class="col p-1">
+            <img class="square-image" src="https://fastly.picsum.photos/id/755/200/200.jpg?hmac=fgsDUz8GLl3UPtHhHlMIabU9V8LhbOPCwYGzrrn6CyU">
+          </div>
+          <div class="col p-1">
+            <img class="square-image" src="https://www.petplate.com/wp-content/uploads/2021/03/AdobeStock_236757188-1024x683.jpeg">
+          </div>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col p-1">
+            <img class="square-image" src="https://fastly.picsum.photos/id/395/200/200.jpg?hmac=wwuALTmMrTRCklDqZ8tkCheruznT4KWlx3IlRc0ISts">
+          </div>
+          <div class="col p-1">
+            <img class="square-image" src="https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VuJTIwYmVhY2h8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
+          </div>
+          <div class="col p-1">
+            <img class="square-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Man_o%27war_cove_near_lulworth_dorset_arp.jpg/800px-Man_o%27war_cove_near_lulworth_dorset_arp.jpg">
+          </div>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col p-1">
+            <img class="square-image" src="https://fastly.picsum.photos/id/523/200/200.jpg?hmac=d1qFeOBBhPqpCZ0U-197Ibo1qK82CmzUfDfKVS70O24">
+          </div>
+          <div class="col p-1">
+            <img class="square-image" src="https://fastly.picsum.photos/id/1008/200/200.jpg?hmac=I0T_cpYR-61pUlB0jVB4I5B7tL0fvzN5MgslAOirM50">
+          </div>
+          <div class="col p-1">
+            <img class="square-image" src="https://fastly.picsum.photos/id/819/200/200.jpg?hmac=nCwO4yKGbs8354aS0yf974UlPFBF_gwUSNazar7yBhk">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <div class="row justify-content-center">
+          <div class="col-6 border m-3">
+            <div class="d-flex justify-content-between">
+                  <h1>My first photo</h1>
+                  <p class="date">12/13</p>
+              </div>
+                  <img class="img-fluid w-100 h-60" src="https://fastly.picsum.photos/id/334/200/200.jpg?hmac=Q9rDA3ngheQsAB7HoLSjpzYS0kqelfZIJBGDkW-4wgk"alt="beautiful photo">
+              <strong>207 Likes</strong>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum pellentesque felis. Nam dolor velit, accumsan ac venenatis sed, gravida</p>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-6 border m-3">
+                <div class="d-flex justify-content-between">
+                  <h2>A dog jumping</h2>
+                  <p>07/24</p>
+                </div>
+                <img class="img-fluid w-100 h-70" src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg">
+                <strong>204 likes</strong>
+                <p>picture caption picture caption picture caption picture caption picture caption picture caption</p>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-6 border m-3">
+                <div class="d-flex justify-content-between">
+                  <h2>A dog with tongue</h2>
+                  <p>08/10</p>
+                </div>
+                <img class="img-fluid w-100" src="https://www.petplate.com/wp-content/uploads/2021/03/AdobeStock_236757188-1024x683.jpeg">
+                <strong>204 likes</strong>
+                <p>picture caption picture caption picture caption picture caption picture caption picture caption</p>
+              </div>
+            </div>
+
+
+
+    
+            <div class="row justify-content-center">
+              <div class="col-6 border m-3">
+                <div class="d-flex justify-content-between">
+                  <h2>A cool beach</h2>
+                  <p>10/20</p>
+                </div>
+                <img class="img-fluid w-100" src="https://www.travelandleisure.com/thmb/HlNYcpqWt9t1IgQq1eTgJG3hp6k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/saud-beach-luzon-philippines-WRLDBEACH0421-15e2c368e7ad4495be803bd60cafa379.jpg">
+                <strong>204 likes</strong>
+                <p>picture caption picture caption picture caption picture caption picture caption picture caption</p>
               </div>
             </div>
           </div>
         </div>
-      </form>
-    </div>
-  </nav>
-  <nav>
-    <div class="nav nav-tabs w-100 d-flex justify-content-center" id="nav-tab" role="tablist">
-      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
-        role="tab" aria-controls="nav-home" aria-selected="true"><i class="fa-solid fa-square"></i></button>
-      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
-        role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-square"></i></button>
-    </div>
-  </nav>
-  <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active m-0 p-0" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-4 p-0"> <img src="https://picsum.photos/200/300?grayscale" width="300" height="300"></div>
-          <div class="col-12 col-md-6 col-lg-4 p-0"> <img
-              src="https://i.picsum.photos/id/31/200/300.jpg?hmac=zQA1_1D1pCB2sbB4Hx3gK8ih9-IPgNID_e_8pK0QsiA"></div>
-          <div class="col-12 col-md-6 col-lg-4 p-0"><img
-              src="https://i.picsum.photos/id/410/200/300.jpg?hmac=c8g8PTUISEdRZEqZGLtB3eOCOq7t5A5rJY1vU8dp_Ds"></div>
-          <div class="col-12 col-md-6 col-lg-4 p-0"><img
-              src="https://i.picsum.photos/id/529/200/300.jpg?hmac=WqdWbOIAJ1H2q4r92Fc4KXM--xvRadidXmV5P2R1rDg"></div>
-          <div class="col-12 col-md-6 col-lg-4 p-0"><img
-              src="https://i.picsum.photos/id/140/200/300.jpg?hmac=Ohrn-4_NX-lissqZBb4RVEr4n4hxt7TXfj5FIkBjTd0"></div>
-          <div class="col-12 col-md-6 col-lg-4 p-0"><img
-              src="https://i.picsum.photos/id/873/200/300.jpg?hmac=CQHrOY67pytIwHLic3cAxphNbh2NwdxnFQtwaX5MLkM"></div>
-          <div class="col-12 col-md-6 col-lg-4 p-0"><img
-              src="https://i.picsum.photos/id/633/200/300.jpg?hmac=TdUWNg34fjigifBBMXrwci0tVpiezw92QqwoO2oDJak"></div>
-          <div class="col-12 col-md-6 col-lg-4 p-0"><img
-              src="https://i.picsum.photos/id/684/200/300.jpg?hmac=nn1tmB9fSTQO4MaL20HOedMOv4HNILJxIjPvOPhuxbE"></div>
-          <div class="col-12 col-md-6 col-lg-4 p-0"><img
-              src="https://i.picsum.photos/id/202/200/300.jpg?hmac=KWOdj8XRnO9x8h_I9rIbscSAhD1x-TwkSPPYjWLN2sI"></div>
-        </div>
       </div>
-    </div>
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-      <div id="list-example" class="d-flex flex-column">
-        <main>
-          <header>
-              <div class="titulopost">
-                  <h1>My first photo</h1>
-                  <p class="date">12/13</p>
-              </div>
-              <div id="photo1">
-                  <img src="https://i.picsum.photos/id/1011/5472/3648.jpg?hmac=Koo9845x2akkVzVFX3xxAc9BCkeGYA9VRVfLE4f0Zzk"
-                  alt="beautiful photo" id="photoinsta">
-              </div>
-              <div id="text1">
-                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum pellentesque felis. Nam dolor
-                      velit, accumsan ac venenatis sed, gravida</p>
-              </div>
-          </header>
-          <header>
-              <div class="titulopost">
-                  <h1>The live is beautiful</h1>
-                  <p class="date">11/24</p>
-              </div>
-              <div id="photo1">
-                  <img src="https://i.picsum.photos/id/1000/5626/3635.jpg?hmac=qWh065Fr_M8Oa3sNsdDL8ngWXv2Jb-EE49ZIn6c0P-g"
-                  alt="beautiful photo2" id="photoinsta2">
-              </div>
-              <div id="text2">
-                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum pellentesque felis. Nam dolor
-                      velit, accumsan ac venenatis sed, gravida</p>
-              </div>
-          </header>
-          <header>
-              <div class="titulopost">
-                  <h1>Someting</h1>
-                  <p class="date">10/20</p>
-              </div>
-              <div id="photo1">
-                  <img src="https://i.picsum.photos/id/1000/5626/3635.jpg?hmac=qWh065Fr_M8Oa3sNsdDL8ngWXv2Jb-EE49ZIn6c0P-g"
-                  alt="beautiful photo2" id="photoinsta2">
-              </div>
-              <div id="text2">
-                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum pellentesque felis. Nam dolor
-                      velit, accumsan ac venenatis sed, gravida</p>
-              </div>
-          </header>
-         
-
-
-
-
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-          integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-          crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-          integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-          crossorigin="anonymous"></script>
+    
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 
 </html>
